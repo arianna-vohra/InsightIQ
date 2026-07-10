@@ -38,3 +38,39 @@ Users can filter business metrics, visualize KPIs, ask business questions in pla
 | Visualization | Plotly |
 | AI | OpenRouter (GPT-OSS 20B) |
 | Reporting | OpenPyXL |
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+                    User
+                      │
+                      ▼
+             Streamlit Dashboard
+                      │
+      ┌───────────────┼────────────────┐
+      ▼               ▼                ▼
+ Dashboard       AI Copilot       Report Export
+ Analytics      (OpenRouter)        (Excel)
+      │               │
+      └───────┬───────┘
+              ▼
+        SQLite Database
+```
+
+---
+
+## 🔄 Project Workflow
+
+1. User selects **Region** and **Category** filters.
+2. Dashboard updates KPIs and visualizations dynamically.
+3. User asks a question in natural language.
+4. InsightIQ detects whether the query requires:
+   - Dashboard analysis, or
+   - SQL generation.
+5. For SQL questions:
+   - AI generates a SQLite query.
+   - Query is executed on the database.
+   - Results are summarized into executive insights.
+6. Users can export a multi-sheet Executive Report in Excel format.
