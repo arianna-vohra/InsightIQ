@@ -60,6 +60,92 @@ Users can filter business metrics, visualize KPIs, ask business questions in pla
 ```
 
 ---
+---
+
+# ⚙️ Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/arianna-vohra/InsightIQ.git
+cd InsightIQ
+```
+
+## Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### macOS / Linux
+
+```bash
+source venv/bin/activate
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Configure Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+OPENROUTER_API_KEY=your_api_key_here
+```
+
+## Run the Application
+
+```bash
+streamlit run app.py
+```
+---
+
+# 📂 Project Structure
+
+```text
+InsightIQ
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+│
+├── assets/
+├── data/
+│   └── raw/
+│
+├── database/
+│   ├── insightiq.db
+│   └── create_database.py
+│
+└── utils/
+    ├── analytics.py
+    ├── ai_helper.py
+    ├── copilot.py
+    ├── sql_agent.py
+    ├── sql_executor.py
+    └── generate_data.py
+```
+---
+
+# 🚀 Future Improvements
+
+- Multi-select dashboard filters
+- PDF executive reports
+- Sales forecasting using Machine Learning
+- Cloud database integration
+- User authentication
+- Role-based dashboards
 
 ## 🔄 Project Workflow
 
@@ -74,3 +160,15 @@ Users can filter business metrics, visualize KPIs, ask business questions in pla
    - Query is executed on the database.
    - Results are summarized into executive insights.
 6. Users can export a multi-sheet Executive Report in Excel format.
+
+---
+---
+
+# 👩‍💻 Author
+
+**Arianna Vohra**
+
+B.Tech Computer Science  
+Thapar Institute of Engineering & Technology
+
+Interested in Business Analytics, Consulting, AI, and Product Management.
